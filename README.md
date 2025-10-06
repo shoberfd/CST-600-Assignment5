@@ -46,6 +46,6 @@ After setting up the environment and placing the `Sample - Superstore.csv` file 
   * **Calendar Features**: Day of week, month, year, quarter.
   * **Lag Features**: Sales from the previous day (`t-1`) and the same day last week (`t-7`).
   * **Rolling Features**: 7-day rolling mean and standard deviation of past sales.
-* **Data Splitting**: A chronological 70/30 train/test split was used to ensure the model was trained only on past data and evaluated on future data, preventing data leakage.
+* **Data Splitting**: A chronological 80/20 train/test split was used to ensure the model was trained only on past data and evaluated on future data, preventing data leakage.
 * **Model Tuning**: `GridSearchCV` with `TimeSeriesSplit` was used to find the optimal MLP architecture and regularization. This cross-validation method respects the temporal order of the data.
-* **Results**: The tuned **MLP Regressor** significantly outperformed both the Naïve (yesterday's sales) and Ridge Regression baselines on the hold-out test set, demonstrating the value of its non-linear modeling capabilities for this forecasting task.
+* **Results**: The tuned **MLP Regressor** performed similarly to both the Naïve (yesterday's sales) and Ridge Regression baselines on the hold-out test set, demonstrating that there isn't much value to the more complex non-linear modeling capabilities for this forecasting task.
