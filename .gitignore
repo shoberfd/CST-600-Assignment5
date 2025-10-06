@@ -3,6 +3,21 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# Data (as instructed, keep data out of Git)
+data/
+
 # C extensions
 *.so
 
